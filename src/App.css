@@ -1,38 +1,267 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+* {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* for Header.js */
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+  align-items: center;
+}
+
+.header-logo {
+  margin: 0px;
+  color: rgb(255, 17, 0);
+}
+
+.header-btn {
+  border: none;
+  margin-left: 15px;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  transition: .3s;
+}
+.header-btn:hover {
+  cursor: pointer;
+}
+
+.sign-in {
+  background-color: rgb(255, 17, 0);
+}
+.sign-in:hover {
+  background-color: rgb(255, 137, 129);
+}
+
+.register {
+  background-color: rgb(29, 29, 29);
+}
+.register:hover {
+  background-color: rgb(117, 117, 117);
+}
+
+/* for Tabs.js */
+.tabs-bar {
+  height: 75px;
+  background-color: rgb(255, 17, 0);
+  align-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.tabs {
+  padding-left: 187px;
+  display: flex;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chev{
+  transform: translate(4px, 4px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tabs > div > p {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 19.5px 13px;
+  transition: .5s;
+  margin: 0px;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tabs > div > p:hover {
+  background-color:  black;
+  cursor: pointer;
+}
+
+/* Tab Dropdown menu */
+
+.gray-drop {
+  width: 300px;
+  top: 120px;
+  background-color: rgb(82, 82, 82);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 10px;
+}
+
+
+.menu-popular-enter-active {
+  opacity: 0%;
+}
+
+.menu-popular-enter-done{
+  opacity: 100%;
+  transition: all .5s;
+}
+
+.menu-popular-exit {
+  opacity: 100%;
+}
+
+.menu-popular-exit-active {
+  opacity: 0%;
+  transition: all .5s;
+}
+
+.menu-trending-enter-active {
+  opacity: 0%;
+}
+
+
+.menu-trending-enter-done{
+  opacity: 100%;
+  transition: all .5s;
+}
+
+.menu-trending-exit {
+  opacity: 100%;
+}
+
+.menu-new-exit-active {
+  opacity: 0%;
+  transition: all .5s;
+}
+
+
+.menu-new-enter-active {
+  opacity: 0%;
+}
+
+.menu-new-enter-done{
+  opacity: 100%;
+  transition: all .5s;
+}
+
+.menu-new-exit {
+  opacity: 100%;
+}
+
+.menu-new-exit-active {
+  opacity: 0%;
+  transition: all .5s;
+}
+
+.dropdown-item {
+  color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 100%;
+  font-size: 20px;
+  transition: .3s;
+}
+
+.dropdown-item:hover {
+  color: rgb(255, 17, 0);
+  cursor: pointer;
+}
+
+/* Count Down CSS */
+.countdown-bar {
+  width: 100%;
+  background-color: rgb(48, 48, 48);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  gap: 5px;
+}
+
+.number-box {
+  width: 20px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  color: rgb(255, 17, 0);
+  text-align: center;
+}
+
+/* Landing Page CSS */
+.landing-page-body {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 30px;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.account-box{
+  border-style: solid;
+  width: 1250px;
+  border-radius: 20px;
+  border-color: gray; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.account-box > legend {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 17, 0);
+}
+
+.landing-box {
+  display: flex;
+  width: 600px;
+  border-style: none;
+  border-radius: 10px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.landing-box > h1 {
+  margin: 0px;
+  padding: 10px;
+  height: 50px;
+  color: black;
+  
+}
+
+.landing-box > img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.landing-races {
+  display: flex;
+  gap: 50px;
+
+}
+
+.image-box {
+  overflow: hidden;
+}
+
+.landing-box:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.landing-box:hover img {
+  transform: scale(1.1);
+  transition: .4s;
+}
+
+.box-description {
+  border: solid;
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: 10px;
+  border-width: 2px;
+  border-color: rgb(184, 184, 184);
+  z-index: 1;
+  height: 100%;
 }
